@@ -1,11 +1,10 @@
-name: ml_course
+name: cn_ml_course
 channels:
   - defaults
 dependencies:
   - jupyter
   - scikit-learn
   - matplotlib
-  - python=3.7
   - pandas
   - jupyterlab
   - numpy
