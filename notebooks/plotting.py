@@ -3,8 +3,17 @@ import numpy as np
 from sklearn.model_selection import learning_curve, validation_curve
 
 
-def plot_learning_curve(estimator, X, y, title="Learning Curve", ylim=None, cv=None,
-                        n_jobs=None, train_sizes=np.linspace(.1, 1.0, 5), scoring=None):
+def plot_learning_curve(
+    estimator,
+    X,
+    y,
+    title="Learning Curve",
+    ylim=None,
+    cv=None,
+    n_jobs=None,
+    train_sizes=np.linspace(0.1, 1.0, 5),
+    scoring=None,
+):
     """
     This is a custom modification of the code present here:
     https://scikit-learn.org/stable/auto_examples/model_selection/plot_learning_curve.html
@@ -75,31 +84,49 @@ def plot_learning_curve(estimator, X, y, title="Learning Curve", ylim=None, cv=N
     axes.set_xlabel("Training examples")
     axes.set_ylabel("Score")
 
-    train_sizes, train_scores, test_scores = learning_curve(estimator, X, y, cv=cv, n_jobs=n_jobs,
-                                                            train_sizes=train_sizes, scoring=scoring)
+    train_sizes, train_scores, test_scores = learning_curve(
+        estimator, X, y, cv=cv, n_jobs=n_jobs, train_sizes=train_sizes, scoring=scoring
+    )
     train_scores_mean = np.mean(train_scores, axis=1)
     train_scores_std = np.std(train_scores, axis=1)
     test_scores_mean = np.mean(test_scores, axis=1)
     test_scores_std = np.std(test_scores, axis=1)
-    
+
     # Plot learning curve
     axes.grid(True)
-    axes.fill_between(train_sizes, train_scores_mean - train_scores_std,
-                      train_scores_mean + train_scores_std, alpha=0.1,
-                      color="r")
-    axes.fill_between(train_sizes, test_scores_mean - test_scores_std,
-                      test_scores_mean + test_scores_std, alpha=0.1,
-                      color="g")
-    axes.plot(train_sizes, train_scores_mean, 'o-', color="r",
-              label="Training score")
-    axes.plot(train_sizes, test_scores_mean, 'o-', color="g",
-              label="Cross-validation score")
+    axes.fill_between(
+        train_sizes,
+        train_scores_mean - train_scores_std,
+        train_scores_mean + train_scores_std,
+        alpha=0.1,
+        color="r",
+    )
+    axes.fill_between(
+        train_sizes,
+        test_scores_mean - test_scores_std,
+        test_scores_mean + test_scores_std,
+        alpha=0.1,
+        color="g",
+    )
+    axes.plot(train_sizes, train_scores_mean, "o-", color="r", label="Training score")
+    axes.plot(
+        train_sizes, test_scores_mean, "o-", color="g", label="Cross-validation score"
+    )
     axes.legend(loc="best")
-    return fig
+    return fig, axes
 
 
-def plot_validation_curve(estimator, X, y, ylim=None, cv=None,
-                          n_jobs=None, param_name=None, param_range=None, scoring='f1'):
+def plot_validation_curve(
+    estimator,
+    X,
+    y,
+    ylim=None,
+    cv=None,
+    n_jobs=None,
+    param_name=None,
+    param_range=None,
+    scoring="f1",
+):
     """
     referred from :
     https://scikit-learn.org/stable/modules/model_evaluation.html#classification-metrics
@@ -144,8 +171,16 @@ def plot_validation_curve(estimator, X, y, ylim=None, cv=None,
 
 
     """
-    train_scores, test_scores = validation_curve(estimator, X, y, param_name=param_name, param_range=param_range,
-                                                 scoring=scoring, n_jobs=n_jobs, cv=cv)
+    train_scores, test_scores = validation_curve(
+        estimator,
+        X,
+        y,
+        param_name=param_name,
+        param_range=param_range,
+        scoring=scoring,
+        n_jobs=n_jobs,
+        cv=cv,
+    )
     train_scores_mean = np.mean(train_scores, axis=1)
     train_scores_std = np.std(train_scores, axis=1)
     test_scores_mean = np.mean(test_scores, axis=1)
@@ -160,15 +195,35 @@ def plot_validation_curve(estimator, X, y, ylim=None, cv=None,
         axes[0].set_ylim(*ylim)
 
     lw = 2
-    axes.plot(param_range, train_scores_mean, label="Training score",
-              color="darkorange", lw=lw)
-    axes.fill_between(param_range, train_scores_mean - train_scores_std,
-                      train_scores_mean + train_scores_std, alpha=0.2,
-                      color="darkorange", lw=lw)
-    axes.plot(param_range, test_scores_mean, label="Cross-validation score",
-              color="navy", lw=lw)
-    axes.fill_between(param_range, test_scores_mean - test_scores_std,
-                      test_scores_mean + test_scores_std, alpha=0.2,
-                      color="navy", lw=lw)
+    axes.plot(
+        param_range,
+        train_scores_mean,
+        label="Training score",
+        color="darkorange",
+        lw=lw,
+    )
+    axes.fill_between(
+        param_range,
+        train_scores_mean - train_scores_std,
+        train_scores_mean + train_scores_std,
+        alpha=0.2,
+        color="darkorange",
+        lw=lw,
+    )
+    axes.plot(
+        param_range,
+        test_scores_mean,
+        label="Cross-validation score",
+        color="navy",
+        lw=lw,
+    )
+    axes.fill_between(
+        param_range,
+        test_scores_mean - test_scores_std,
+        test_scores_mean + test_scores_std,
+        alpha=0.2,
+        color="navy",
+        lw=lw,
+    )
     axes.legend(loc="best")
-    return fig
+    return fig, axes
