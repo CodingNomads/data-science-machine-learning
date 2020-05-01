@@ -125,7 +125,7 @@ def plot_validation_curve(
     n_jobs=None,
     param_name=None,
     param_range=None,
-    scoring="f1",
+    scoring=None,
 ):
     """
     referred from :
