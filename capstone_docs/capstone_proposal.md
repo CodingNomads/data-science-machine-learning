@@ -24,11 +24,11 @@ Nearly all ML problems can be reduced to that form and this is very helpful beca
 
 ## Datasets and Inputs
 
-The dataset(s) and/or input(s) being considered for the project should be thoroughly described, such as how they relate to the problem and why they should be used. Information such as how the dataset or input is (was) obtained, and the characteristics of the dataset or input, should be included with relevant references and citations as necessary. 
+The dataset(s) and/or input(s) being considered for the project should be thoroughly described, such as how they relate to the problem and why they should be used. Information such as how the dataset or input is (was) obtained, and the characteristics of the dataset or input, should be included with relevant references and citations as necessary.  You don't need to be worried about citation format, just make sure to cite your sources so we can follow the trail. 
 
 ## Solution Statement
 
-In this section, clearly describe your proposed solution to the problem. What machine learning techniques are you proposing to do with the dataset. How does that solve the problem? 
+In this section, clearly describe your proposed solution to the problem. What machine learning techniques are you proposing to do with the dataset. How does that solve the problem you described earlier? 
 
 ## Benchmark Model
 

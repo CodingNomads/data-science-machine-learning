@@ -17,7 +17,7 @@ Take every sentence of your abstract (which answered all those questions) and ex
 
 ## Related Work
 
-Tell us about how other people have solved this problem. You may have no idea - that's OK. Spend a little time researching it, you don't need to do any in depth literature review (this isn't grad school), but it's good to have _some_ idea how others have approached the problem. You can organize it two ways. Chronologically or Topologically.  Chronologically is just by time, who did what when at what point in time. Topologically is by method, different kinds of techniques to solve the problem.  However you present it, just make sure it's logical and follows a flow.  This section can be an enormous rabbit hole de
+Tell us about how other people have solved this problem. You may have no idea - that's OK. Spend a little time researching it, you don't need to do any in depth literature review (this isn't grad school), but it's good to have _some_ idea how others have approached the problem. You can organize it two ways. Chronologically or Topologically.  Chronologically is just by time, who did what when at what point in time. Topologically is by method, different kinds of techniques to solve the problem.  However you present it, just make sure it's logical and follows a flow.  This section can be endless since it's research based, so make of it what you _you_ want.
 
 ## Methodology
 
