@@ -37,7 +37,7 @@ What algorithms will you use, why? Describe the algorithms briefly (how do they 
 
 ### Metrics
 
-What metrics are you using to evaluate your model? Why? Describe what the metrics are what they do.
+What metrics are you using to evaluate your model? Why? Describe what the metrics are measuring (you can show equations or not, your choice) and why that metric suits your problem well.  
 
 ### Experiments
 
