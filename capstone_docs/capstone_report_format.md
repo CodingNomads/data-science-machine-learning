@@ -1,6 +1,6 @@
 # Capstone Report Format
 
-Your capstone report should take the form of a semi-formal research paper. If you have never written a research paper before, that's OK, I'll explain it all very clearly. You may wonder *why* you need to write a paper, in fact why aren't you just submitting your code? Well, submitting code is well and fine, but in order to truly check if you have understood anything, you need to explain it. It's 10x harder to explain what you have done than it is to do it. The reality is, if you want to get hired or be useful, you need to be able to explain what you have done and why.  A research paper format is an *excellent* way to do this.
+Your capstone report should take the form of a semi-formal research paper. If you have never written a research paper before, that's OK, you just need to follow the instructions here. You may wonder *why* you need to write a paper, in fact why aren't you just submitting your code? Well, submitting code is well and fine, but in order to truly check if you have understood anything, you need to explain it. It's 10x harder to explain what you have done than it is to do it. The reality is, if you want to get hired or be useful, you need to be able to explain what you have done and why.  A research paper format is an *excellent* way to do this.
 
 
 ## Abstract
