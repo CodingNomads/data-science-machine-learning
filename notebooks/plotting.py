@@ -80,7 +80,7 @@ def plot_learning_curve(
 
     axes.set_title(title)
     if ylim is not None:
-        axes[0].set_ylim(*ylim)
+        axes.set_ylim(*ylim)
     axes.set_xlabel("Training examples")
     axes.set_ylabel("Score")
 
@@ -192,7 +192,7 @@ def plot_validation_curve(
     axes.set_xlabel(f"{param_name}")
     axes.set_ylabel(f"{scoring}")
     if ylim is not None:
-        axes[0].set_ylim(*ylim)
+        axes.set_ylim(*ylim)
 
     lw = 2
     axes.plot(
